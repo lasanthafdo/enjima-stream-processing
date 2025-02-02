@@ -31,7 +31,7 @@ For example, if you want to run the YSB benchmark for 30 seconds with 512 MiB of
 There are some files to prepare before executing benchmarks.
 
 ### Creating <code>lib</code> folder
-If the <code>lib</code> folder does not exist, create one. Then, copy following giles generated after building <code>enjima</code>. Refer to <a href="https://github.com/lasanthafdo/enjima">this link</a> for details on how to build <code>enjima</code>
+If the <code>lib</code> folder does not exist, create one. Then, copy following giles generated after building <code>enjima</code>. Refer to <a href="https://github.com/lasanthafdo/enjima-library">this link</a> for details on how to build <code>enjima</code>
 ```
 libEnjimaDebug.a      (if you built enjima with Debug mode)
 libEnjimaRelease.a    (if you build enjima with Release mode)
