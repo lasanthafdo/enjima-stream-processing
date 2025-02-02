@@ -1,0 +1,18 @@
+{
+  "exp_to_run": "resource_utilization",
+  "exp_config_file": {
+    "latency_vs_tput": "config_latency_vs_tput.json",
+    "ysb_single": "config_ysb_single.json",
+    "ysb_scaling": "config_ysb_scaling.json",
+    "lrb_single": "config_lrb_single.json",
+    "lrb_single_extended": "config_lrb_single_extended.json",
+    "lrb_scaling": "config_lrb_scaling.json",
+    "nyt_single": "config_nyt_single.json",
+    "nyt_scaling": "config_nyt_scaling.json",
+    "timeseries_metrics": "config_timeseries_metrics.json",
+    "chunk_size_sensitivity": "config_csize_sensitivity.json",
+    "block_size_sensitivity": "config_bsize_sensitivity.json",
+    "sched_period_sensitivity": "config_sched_period_sensitivity.json",
+    "resource_utilization": "config_resource_utilization.json"
+  }
+}

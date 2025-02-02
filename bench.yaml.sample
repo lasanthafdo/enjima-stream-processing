@@ -1,0 +1,72 @@
+benchmarkConfig:
+        YSB:
+                inputRates: "10000000 20000000"
+                maxMemory: 4096
+                latencyRes: "Micros"
+                eventsPerBlock: 400
+                blocksPerChunk: 4
+                backpressureThreshold: 100
+                targetDir: "cmake-build-release"
+                latencyValues: "50"
+                schedulingModes: "SBPriority TB"
+                schedulingPeriod: 50
+                maxIdleThresholdMs: 2
+                preemptModes: "Preemptive NonPreemptive"
+                priorityTypes: "InputQueueSize Adaptive"
+                processingModes: "QueueBasedSingle BlockBasedBatch"
+                numWorkers: 4
+                numQueriesArr: "1 2 4 8"
+                expType: "normal" # normal|sensitivity_analysis|config_specific
+                specific:
+                        TB:
+                                processingModes: "BlockBasedSingle BlockBasedBatch"
+                                backpressureThreshold: 100
+                        SB:
+                                processingModes: "BlockBasedBatch"
+                                backpressureThreshold: 100
+                        q1:
+                                eventGenCpuList: "0"
+                                workerCpuList: "2,3"
+                                numWorkers: 2
+                        q4:
+                                eventGenCpuList: "0,1,6,7"
+                                workerCpuList: "2,3,4,5,8,9,10,11"
+                                numWorkers: 8
+        LRB:
+                dataPath: "/hdd1/t86kim_test/datafile3hours.dat"
+                inputRates: "10000000"
+                maxMemory: 12288
+                latencyRes: "Micros"
+                eventsPerBlock: 400
+                blocksPerChunk: 4
+                backpressureThreshold: 100
+                targetDir: "cmake-build-release"
+                latencyValues: "50"
+                schedulingModes: "TB"
+                schedulingPeriod: 50
+                maxIdleThresholdMs: 2
+                preemptModes: "NonPreemptive"
+                priorityTypes: "LatencyOptimized"
+                processingModes: "BlockBasedBatch"
+                numWorkers: 8
+                numQueriesArr: "1"
+                expType: "normal"
+                specific:
+                        TB:
+                                processingModes: "BlockBasedBatch"
+                                backpressureThreshold: 100
+                        SB:
+                                processingModes: "BlockBasedBatch"
+                                backpressureThreshold: 100
+                        q1:
+                                eventGenCpuList: "0"
+                                workerCpuList: "2,3"
+                                numWorkers: 2
+                        q2:
+                                eventGenCpuList: "0"
+                                workerCpuList: "2,3"
+                                numWorkers: 2
+                        q4:
+                                eventGenCpuList: "0,1,6,7"
+                                workerCpuList: "2,3,4,5,8,9,10,11"
+                                numWorkers: 8
